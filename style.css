@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  border-radius: 20px;
+  cursor: pointer;
+  flex: 2;
+  position: relative;
+  margin: 5px;
+  transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel1 {
+  background-image: url(jona1.jpeg);
+}
+
+.panel2 {
+  background-image: url(jona2.jpeg);
+}
+.panel3 {
+  background-image: url(jona4.jpg);
+}
+.panel4 {
+  background-image: url(jona5.jpg);
+}
+.panel5 {
+  background-image: url(sz1.jpg);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
